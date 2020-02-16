@@ -36,4 +36,4 @@ Simply open the Colab and start running the cells (make sure GPU is running)! Yo
 
 ## Future Work
 
-I would like to make a more generalized notebok that can work with most GAN models. 
+Make a more generalized notebok that can work with most image processing models. 
