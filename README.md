@@ -30,9 +30,36 @@ This particular notebook is customized to EDVR rather than the fully generalized
 
 The reason is EDVR isn't quite as straightforward as other models (it doesn't transform one image at a time and there can be memory issues if the group of images passed isn't handled).
 
-## Usage
+## Instructions
 
-Simply open the Colab and start running the cells (make sure GPU is running)! You can download any video from your preferred video hosting service and transform it with EDVR.
+Simply open the Colab and start running the cells (make sure GPU is running)! You can download any video from your preferred video hosting service and transform it with EDVR. The setup should look familiar to anyone who has used the Colab notebooks in DeOldify. 
+
+The main method is called via a Form Cell with a few options:
+
+**source_url:** This is the youtube (or other sources) link you want to download your video from.
+
+**original_video_quality:** You can also pass in an argument on what the quality of the video downloaded should be (based on the options we get in youtube).
+
+**data_mode:** The EDVR model you want to use
+
+**finetune_stage2:** A boolean indicating if you want to fine-tune your results using the stage 2 models.
+
+## About EDVR
+
+EDVR has a bunch of models which can take a while to wrap your head around.
+Here is their guide for it: https://github.com/xinntao/EDVR/wiki/Model-Zoo
+
+I think It's easier to understand by what they do. There are 5 models in total.
+There are 3 models that can enhance the resolution of an image by 4x: Vid4, sharp_bicubic and blur_bicubic.
+
+Vid4 was trained on the Vimeo90K dataset while the other two were trained on the REDS dataset.
+The blur model simply deblurs an image without resiizng it.
+
+The blur_comp (my favorite) model deblurs and removes compression artifacts from the video.
+
+The sharp_bicubic model was trained by simply reducing the size of the training images while the blur_bicubic model had added noise in the inputs to deal with. So the blur_bicubic model is better suited to handling blurry inputs vs the sharp_bicubic model.
+
+The EDVR team won the NTIRE 2019 Challenges on Video Restoration and Enhancement competition on the REDS dataset with these models. For their winning approsach tehy finetuned the results on a second set of models that they call stage2. You have the option of selecting True for finetune_stage2 which will run your frames through a second time and finetune them but remember this will double the time it takes to process your video.
 
 ## Future Work
 
