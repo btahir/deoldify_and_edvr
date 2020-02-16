@@ -1,6 +1,6 @@
 # Introduction
 
-This notebook combines elements of two of my favorite projects: DeOldify and EDVR.
+This project combines elements of two of my favorite projects: DeOldify and EDVR.
 
 Specifically, it leverages DeOldify's beautiful approach to downloading, extracting and transforming videos, but instead of Colorizing them with the DeOldify model, we use EDVR to restore them.
 
