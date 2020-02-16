@@ -36,4 +36,4 @@ Simply open the Colab and start running the cells (make sure GPU is running)! Yo
 
 ## Future Work
 
-Make a more generalized notebok that can work with most image processing models. 
+Make a more generalized notebok that can work with most image processing models. Maybe make a library out of the code so the notebook looks cleaner/smaller.
