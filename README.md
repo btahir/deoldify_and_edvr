@@ -16,7 +16,7 @@ EDVR or Video Restoration with Enhanced Deformable Convolutional Networks is the
 
 ## Background
 
-Unfortunately, most Deep Learning researchers do not pay enough attention to the usability of their code. A lot of times there is a lack of documentation on what the code is doing. If a repo is properly documented, the emphasis is on how to train models rather than do inference. 
+Unfortunately, most Deep Learning researchers do not pay enough attention to the accessibility of their code. A lot of times there is a lack of documentation on what the code is doing. If a repo is properly documented, the emphasis is on how to train models rather than do inference. 
 
 Usually with enough hair pulling, one can test pre-trained models on images, but doing it on video requires a lot of different things to come together: downloading it, extracting the frames, processing the frames, putting the frames back togetehr, handling the audio along the way and so on...
 
