@@ -24,7 +24,15 @@ Usually with enough hair pulling, one can test pre-trained models on images, but
 
 Probably one of the best implementations of transforming video is DeOldify. I'm a huge fan of how they setup the workflow of handling video and leverage Google Colab Forms to let people play with it like an App. 
 
-My motivation for this approach was to generalize DeOldify where it can take pretty much any GAN model and transform a video. Plug and play. I tried it with some Style Transfer and ESRGAN models and it worked fine.
+The workflow for DeOldify goes like this:
+
+1. Download a video
+2. Extract frames & audio
+3. Process each frame
+4. Put frames & audio back together
+5. Voila! Your video is ready.
+
+As we can see the only step that is specific to using the DeOldify model is Step 3. My motivation for this project was to generalize DeOldify where it can take pretty much any GAN model and transform a video. Plug and play. I tried it with some Style Transfer and ESRGAN models and it worked fine. Theoretically - it should just be tweaking the function in Step 3 and everything else should just work.
 
 This particular notebook is customized to EDVR rather than the fully generalized one I hope to get to.
 
