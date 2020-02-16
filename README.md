@@ -32,9 +32,11 @@ The reason is EDVR isn't quite as straightforward as other models (it doesn't tr
 
 ## Instructions
 
-Simply open the Colab and start running the cells (make sure GPU is running)! You can download any video from your preferred video hosting service and transform it with EDVR. The setup should look familiar to anyone who has used the Colab notebooks in DeOldify. 
+Simply open the Colab and start running the cells (make sure GPU is running)! You can download any video from your preferred video hosting service and transform it with EDVR. The setup should look familiar to anyone who has used the Colab notebooks in DeOldify.
 
 The main method is called via a Form Cell with a few options:
+
+![Form Example](https://github.com/btahir/deoldify_and_edvr/blob/master/form.png) 
 
 **source_url:** This is the youtube (or other sources) link you want to download your video from.
 
